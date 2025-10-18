@@ -81,7 +81,7 @@ export function TabBar({ className }: TabBarProps) {
             onDragEnd={handleDragEnd}
             className={cn(
               "group relative flex items-center gap-2 px-4 py-2.5 cursor-pointer transition-all duration-150 min-w-0 max-w-52 select-none last:border-r-0",
-              // Active tab styling - VSCode style
+              // Active tab styling - VS Code style
               activeTabId === tab.id 
                 ? "bg-panel before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:content-['']" 
                 : "bg-panel hover:bg-[var(--tab-hover-background)]",
@@ -160,7 +160,7 @@ export function TabBar({ className }: TabBarProps) {
               <X size={11} className="transition-transform duration-150 hover:scale-110" />
             </Button>
 
-            {/* Modified indicator dot for unsaved changes - VSCode style */}
+            {/* Modified indicator dot for unsaved changes - VS Code style */}
             {/* You can add this when you implement unsaved changes tracking */}
             {/* <div className="absolute top-1/2 left-1 w-1.5 h-1.5 rounded-full transform -translate-y-1/2" style={{ backgroundColor: 'var(--tab-active-text)' }} /> */}
           </div>

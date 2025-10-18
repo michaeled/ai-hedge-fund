@@ -133,7 +133,7 @@ export function useLayoutKeyboardShortcuts(
   if (toggleBottomPanel) {
     shortcuts.push({
       key: 'j',
-      ctrlKey: true, // This will match either Ctrl+J or Cmd+J (like VSCode)
+      ctrlKey: true, // This will match either Ctrl+J or Cmd+J (like VS Code)
       metaKey: true,
       callback: toggleBottomPanel,
       preventDefault: true,
