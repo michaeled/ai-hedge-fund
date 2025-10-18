@@ -338,7 +338,7 @@ if not "!USE_OLLAMA!"=="" (
         echo Checking connectivity to Ollama...
         set REACHABLE=
         for /l %%i in (1, 1, 30) do (
-            powershell -NoLogo -Command "try {Invoke-WebRequest -Uri '!HEALTHCHECK_URL!' -UseBasicParsing -TimeoutSec 2 ^| Out-Null; exit 0} catch { exit 1 }" >nul 2>&1
+            powershell -NoLogo -Command "try {Invoke-WebRequest -URI '!HEALTHCHECK_URL!' -UseBasicParsing -TimeoutSec 2 ^| Out-Null; exit 0} catch { exit 1 }" >nul 2>&1
             if !ERRORLEVEL! EQU 0 (
                 set REACHABLE=1
                 goto :external_check_done

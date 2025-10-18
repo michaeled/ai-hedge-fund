@@ -303,7 +303,7 @@ class OllamaService:
             return False
     
     def _stop_unix_process(self) -> bool:
-        """Stop Ollama on Unix-like systems."""
+        """Stop Ollama on UNIX-like systems."""
         try:
             result = subprocess.run(
                 ["pgrep", "-f", "ollama serve"], 
@@ -319,7 +319,7 @@ class OllamaService:
             return self._verify_server_stopped()
             
         except Exception as e:
-            logger.error(f"Error stopping Unix process: {e}")
+            logger.error(f"Error stopping UNIX process: {e}")
             return False
     
     def _stop_windows_process(self) -> bool:
